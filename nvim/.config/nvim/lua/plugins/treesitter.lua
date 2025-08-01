@@ -55,6 +55,22 @@ return {
         },
       },
 
+      -- Custom text object mappings:
+      -- SELECT (visual mode / operator pending):
+      --   aa/ia - parameter outer/inner
+      --   af/if - function outer/inner  
+      --   ac/ic - class outer/inner
+      --   ai/ii - conditional outer/inner
+      --   al/il - loop outer/inner
+      --   at    - comment outer
+      -- MOVEMENT:
+      --   ]f/[f - next/previous function start
+      --   ]F/[F - next/previous function end
+      --   ]]/[[ - next/previous class start
+      --   ][/[] - next/previous class end
+      -- SWAP:
+      --   <leader>a - swap parameter with next
+      --   <leader>A - swap parameter with previous
       textobjects = {
         select = {
           enable = true,
