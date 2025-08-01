@@ -1,0 +1,44 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Repository Overview
+
+This is a dotfiles repository containing personal configuration files for various development tools. The repository uses a simple directory-based structure where each application has its own top-level directory.
+
+## Structure
+
+- `nvim/` - Neovim configuration
+  - `.config/nvim/init.lua` - Main Neovim configuration file
+  - `.config/nvim/lazy-lock.json` - Plugin lock file for Lazy.nvim
+- `zsh/` - Zsh shell configuration
+  - `.zshrc` - Zsh configuration (currently minimal, only contains pnpm PATH)
+
+## Key Technologies
+
+- **Neovim**: Uses Lazy.nvim as plugin manager
+- **LSP**: Configured with mason.nvim for language server management
+- **Shell**: Zsh with pnpm in PATH
+
+## Development Notes
+
+### Current State
+- The repository is in early stages with minimal configurations
+- No installation automation exists - files must be manually symlinked or copied
+- Neovim configuration appears incomplete (init.lua is truncated)
+
+### When Adding Configurations
+1. Follow the existing pattern: create a top-level directory for each application
+2. Use XDG base directory specification where applicable (e.g., `.config/` subdirectories)
+3. Keep application configurations isolated in their respective directories
+
+### Common Tasks
+- **Adding new dotfiles**: Create a new directory at the root level for the application
+- **Testing configurations**: Manually symlink files to their expected locations (e.g., `ln -s ~/dotfiles/nvim/.config/nvim ~/.config/nvim`)
+
+### Missing Components
+- Installation/setup script
+- Symlink management
+- README documentation
+- .gitignore file
+- Complete Neovim plugin configurations

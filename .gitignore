@@ -1,0 +1,24 @@
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Neovim
+nvim/.config/nvim/plugin/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Local configuration overrides
+*.local
+
+# Lua
+.luarc.json
