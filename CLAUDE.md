@@ -11,6 +11,14 @@ This is a dotfiles repository containing personal configuration files for variou
 - `nvim/` - Neovim configuration
   - `.config/nvim/init.lua` - Main Neovim configuration file
   - `.config/nvim/lazy-lock.json` - Plugin lock file for Lazy.nvim
+  - `.config/nvim/lua/plugins/` - Modular plugin configurations
+    - `colorscheme.lua` - Catppuccin theme configuration
+    - `devicons.lua` - File and folder icons
+    - `gitsigns.lua` - Git decorations and hunks
+    - `lsp.lua` - Language Server Protocol setup
+    - `lualine.lua` - Status line with git info
+    - `telescope.lua` - Fuzzy finder
+    - `treesitter.lua` - Syntax highlighting
 - `zsh/` - Zsh shell configuration
   - `.zshrc` - Zsh configuration (currently minimal, only contains pnpm PATH)
 
@@ -19,6 +27,20 @@ This is a dotfiles repository containing personal configuration files for variou
 - **Neovim**: Uses Lazy.nvim as plugin manager
 - **LSP**: Configured with mason.nvim for language server management
 - **Shell**: Zsh with pnpm in PATH
+
+## Prerequisites
+
+### Nerd Font Requirement
+For proper display of icons in Neovim (git status, file icons, diagnostics), you need a Nerd Font installed:
+- Recommended fonts: JetBrains Mono Nerd Font, Fira Code Nerd Font, Hack Nerd Font
+- Download from: https://www.nerdfonts.com/
+- Set your terminal to use the installed Nerd Font
+
+Without a Nerd Font, you'll see broken characters instead of icons in:
+- Gitsigns (git status in the gutter)
+- Lualine status line (file types, git branch, etc.)
+- LSP diagnostics (error/warning icons)
+- Telescope (file type icons)
 
 ## Development Notes
 
