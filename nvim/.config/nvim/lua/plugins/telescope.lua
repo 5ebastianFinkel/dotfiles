@@ -107,7 +107,9 @@ return {
       },
       pickers = {
         find_files = {
-          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+          find_command = vim.fn.executable("rg") == 1
+            and { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+            or { "find", ".", "-type", "f" },
         },
       },
     })
