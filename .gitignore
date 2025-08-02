@@ -12,6 +12,9 @@ Thumbs.db
 # Neovim
 nvim/.config/nvim/plugin/
 
+# Tmux
+tmux/.config/tmux/plugins/
+
 # Temporary files
 *.tmp
 *.bak

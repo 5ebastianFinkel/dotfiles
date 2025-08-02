@@ -19,6 +19,8 @@ This is a dotfiles repository containing personal configuration files for variou
     - `lualine.lua` - Status line with git info
     - `telescope.lua` - Fuzzy finder
     - `treesitter.lua` - Syntax highlighting
+- `tmux/` - Tmux terminal multiplexer configuration
+  - `.config/tmux/tmux.conf` - Main tmux configuration file
 - `zsh/` - Zsh shell configuration
   - `.zshrc` - Zsh configuration (currently minimal, only contains pnpm PATH)
 
@@ -26,6 +28,7 @@ This is a dotfiles repository containing personal configuration files for variou
 
 - **Neovim**: Uses Lazy.nvim as plugin manager
 - **LSP**: Configured with mason.nvim for language server management
+- **Tmux**: Terminal multiplexer for managing multiple terminal sessions
 - **Shell**: Zsh with pnpm in PATH
 
 ## Prerequisites
@@ -46,7 +49,7 @@ Without a Nerd Font, you'll see broken characters instead of icons in:
 
 ### Current State
 - The repository is in early stages with minimal configurations
-- No installation automation exists - files must be manually symlinked or copied
+- Uses GNU Stow for symlink management
 - Neovim configuration appears incomplete (init.lua is truncated)
 
 ### When Adding Configurations
@@ -56,11 +59,12 @@ Without a Nerd Font, you'll see broken characters instead of icons in:
 
 ### Common Tasks
 - **Adding new dotfiles**: Create a new directory at the root level for the application
-- **Testing configurations**: Manually symlink files to their expected locations (e.g., `ln -s ~/dotfiles/nvim/.config/nvim ~/.config/nvim`)
+- **Installing configurations**: Use GNU Stow to create symlinks: `stow <directory>`
+- **Uninstalling configurations**: Use `stow -D <directory>` to remove symlinks
+- **Testing configurations**: Stow will automatically symlink files to their expected locations
 
 ### Missing Components
 - Installation/setup script
-- Symlink management
 - README documentation
 - .gitignore file
 - Complete Neovim plugin configurations
