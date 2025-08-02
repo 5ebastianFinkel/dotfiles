@@ -62,9 +62,8 @@ Without a Nerd Font, you'll see broken characters instead of icons in:
 - **Installing configurations**: Use GNU Stow to create symlinks: `stow <directory>`
 - **Uninstalling configurations**: Use `stow -D <directory>` to remove symlinks
 - **Testing configurations**: Stow will automatically symlink files to their expected locations
+- **Tmux setup**: After stowing tmux, install TPM: `git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
 
 ### Missing Components
 - Installation/setup script
-- README documentation
-- .gitignore file
 - Complete Neovim plugin configurations
