@@ -24,4 +24,4 @@ tmux/.config/tmux/plugins/
 *.local
 
 # Lua
-.luarc.json
+.luarc.jsonzplug/
